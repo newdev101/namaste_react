@@ -1,0 +1,27 @@
+{
+  "name": "02igniting_our_app",
+  "version": "1.0.0",
+  "description": "it is our demo project",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/newdev101/namaste_react.git"
+  },
+  "author": "rajat jana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/newdev101/namaste_react/issues"
+  },
+  "homepage": "https://github.com/newdev101/namaste_react#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  }
+}

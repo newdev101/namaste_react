@@ -1,0 +1,7 @@
+npm init -y
+npm install -D parcel
+npx parcel index.html
+npx parcel build index.html
+npm i react react-dom
+type="module"
+Adding automatically created folders and files to .gitignore
