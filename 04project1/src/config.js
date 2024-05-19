@@ -1,51 +1,6 @@
-import react from "react";
-import reactDOM from "react-dom/client";
+export const img_cdn_url = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
 
-/*
-              Header
-                    - Logo
-                    - Navitems
-                    - Cart
-              Body
-                    - Search
-                    - ReastaurantList
-                         - Restaurant card
-                         - image
-                         - name
-                         - rarting
-                         - cousine
-              Footer
-                    - links
-                    - copyrights
-
-            */
-
-const Title = () => {
-     return (
-          <a href="/">
-               <img alt="logo" id="logo" src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj" />
-          </a>
-     );
-};
-
-const HeaderComponent = () => {
-  return (
-    <div className="header">
-      <Title />
-      <div className="nav-items">
-          <ul>
-                 <li>HOME</li>
-                 <li>ABOUT</li>
-                 <li>CONTACT</li>
-                 <li>Cart</li>
-          </ul>
-      </div>
-    </div>
-  );
-};
-
-//!       CONFIG DRIVEN UI
-const config = [
+export const config = [
      {
           "card": {
                "card": {
@@ -604,93 +559,7 @@ const config = [
 ];
 
 
-const reastaurantList = [
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-     {
-          name: "Burger King",
-          rating: "4.5",
-          cousine: ["Indian", "Chinese", "Continental"],
-          image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-     },
-];
-
-const burgerKing = {
-     name: "Burger King",
-     rating: "4.5",
-     cousine: ["Indian", "Chinese", "Continental"],
-     image: "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/e33e1d3ba7d6b2bb0d45e1001b731fcf",
-};
-
-const i=2;
-const Card = ({cloudinaryImageId, name, avgRatingString, cuisines, id})=>{
-     // const {cloudinaryImageId, name, avgRatingString, cuisines} = restaurant;
-     console.log(id);
-     return (
-          <div className="card">
-               <img src={"https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"+cloudinaryImageId} />
-               <h2>{name}</h2>
-               <p>{avgRatingString} Stars</p>
-               <p>{cuisines.join(" ")}</p>
-          </div>
-     );
-}
 
 
 
-const Body = () => {
-     return (
-        <div className="restaurant-list">
-          {
-               config.map((restaurant)=>{
-                    return <Card {...restaurant.card.card.info} key={restaurant.card.card.info.id} id={restaurant.card.card.info.id}/>
-               })
-          }
-        </div>
-     );
-}
 
-const Footer = ()=>{
-     return (<p>Footer</p>);
-}
-
-const AppLayout = () => {
-  return (
-     <>
-     <HeaderComponent />
-     <Body />
-     <Footer />
-     </>
-);
-};
-
-const root = reactDOM.createRoot(document.getElementById("root"));
-root.render(<AppLayout />);

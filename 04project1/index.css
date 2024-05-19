@@ -19,6 +19,8 @@
      width: 100px;
 }
 
+
+
 .card{
      width: 200px;
      border: 2px dashed yellowgreen;
@@ -34,4 +36,10 @@
 .restaurant-list{
      display: flex;
      flex-wrap: wrap;
+}
+
+.search-continer{
+     padding: 20px;
+     margin: 20px;
+     font-size: 1.5rem;
 }
