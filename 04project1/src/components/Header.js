@@ -1,4 +1,7 @@
 import { useState } from "react";
+import {Link} from "react-router-dom";
+import LOGO from "../assests/images/foodvilla.jpg"
+
 
 export const Title = () => {
   return (
@@ -6,7 +9,7 @@ export const Title = () => {
       <img
         alt="logo"
         id="logo"
-        src="https://yt3.ggpht.com/ytc/AKedOLSpK3T_2RxkMYb-pk9oENQB0NvYpeOdXRgQe8i5=s800-c-k-c0x00ffffff-no-rj"
+        src={LOGO}
       />
     </a>
   );
@@ -24,9 +27,15 @@ const HeaderComponent = () => {
       <Title />
       <div className="nav-items">
         <ul>
-          <li>HOME</li>
-          <li>ABOUT</li>
-          <li>CONTACT</li>
+          <li>
+            <Link to="/">HOME</Link>  
+          </li>
+          <li>
+            <Link to="/about">ABOUT</Link>
+          </li>
+          <li>
+            <Link to="/contact">CONTACT</Link>
+          </li>
           <li>Cart</li>
         </ul>
         <p className="user" onClick={() => userAuth()}>
