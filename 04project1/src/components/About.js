@@ -1,27 +1,13 @@
 import { Component } from "react";
 import { Outlet } from "react-router-dom";
-import Profile from "./Profile";
+import Shimmer from "./Shimmer";
 
-class About extends Component {
-  constructor(props) {
-    super(props);
-    console.log("parent-constructor");
-  }
-
-  async componentDidMount() {
-
-     console.log("parent-componentDidMount");
-   
-  }
-  render() {
-    console.log("parent-render");
-     return(
-          <div>
-               <h1>About</h1>
-               <Profile />
-          </div>
-     )
-  }
+const About = ()=>{
+  return(
+    <div id="about-container" className="h-[500px]">
+      <Shimmer cnt={5} page="About" />
+      <Outlet />
+    </div>
+ )
 }
-
 export default About;

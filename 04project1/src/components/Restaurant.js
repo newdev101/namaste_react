@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Swiggy_api, img_cdn_url } from "../config";
-import {IndividualCard} from "./Card";
+import Card from "./Card";
 import Shimmer from "./Shimmer";
 
 const Restaurant = () => {
@@ -27,8 +27,8 @@ const Restaurant = () => {
      return <Shimmer />;
   }
   return (
-    <div className="individual-restaurant">
-      <IndividualCard {...restaurant} />
+    <div className="h-[497px]  flex justify-center  align-top">
+      <Card {...restaurant} />
     </div>
   );
 };

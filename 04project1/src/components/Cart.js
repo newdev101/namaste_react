@@ -1,11 +1,11 @@
 import Shimmer from "./Shimmer";
 
-const Contact = ()=>{
+const Cart = ()=>{
   return(
     <div id="about-container" className="h-[500px]">
-      <Shimmer cnt={5} page="CONSTACT" />
+      <Shimmer cnt={5} page="CART" />
      
     </div>
  )
 }
-export default Contact;
+export default Cart;

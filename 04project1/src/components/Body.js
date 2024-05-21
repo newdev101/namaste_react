@@ -1,6 +1,6 @@
 import Card from "./Card";
 import Shimmer from "./Shimmer";
-import { config, Swiggy_api } from "../config";
+import { Swiggy_api } from "../config";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
@@ -36,15 +36,15 @@ const Body = () => {
   console.log("render called");
 
   return allRestaurants.length === 0 ? (
-    <Shimmer />
+    <Shimmer cnt={7} />
   ) : (
     <>
-      <div className="search-container">
+      <div className="m-4">
         <input
           type="text"
           placeholder="search..."
           value={searchText}
-          className="search-input"
+          className="h-10 w-80 border-2 border-gray-300 p-2 rounded-md"
           onChange={async (e) => {
             setSearchText(e.target.value);
             const data = filterData(e.target.value.toLowerCase());
@@ -52,7 +52,7 @@ const Body = () => {
           }}
         />
         <button
-          className="search-btn"
+          className="bg-blue-500 hover:bg-violet-600 text-white p-2 rounded-lg ml-2"
           onClick={() => {
             const data = filterData(searchText.toLowerCase());
             setRestaurants(data);
@@ -61,7 +61,7 @@ const Body = () => {
           Search
         </button>
       </div>
-      <div className="restaurant-list">
+      <div className="flex flex-wrap justify-center">
         {restaurants.length === 0 ? (
           <h1>No results found</h1>
         ) : (
